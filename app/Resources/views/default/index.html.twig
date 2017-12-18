@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% include "GoogleBundle:Analytics:async.html.twig" %}
+
+  {% include "GoogleBundle:Adwords:track.html.twig" %}
+llllllll
+  {% if google_maps.hasMaps() %}
+        {% for map in google_maps.getMaps() %}
+            {% autoescape false %}
+                {{ map.render }}
+            {% endautoescape %}
+        {% endfor %}
+    {% endif %}
+{% endblock %}

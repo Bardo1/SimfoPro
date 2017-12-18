@@ -1,0 +1,3 @@
+lista_sector:
+    path:     /lista_sector
+    defaults: { _controller: NormasBundle:GenRegionREST:listaSector }
